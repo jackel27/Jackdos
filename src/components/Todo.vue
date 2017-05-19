@@ -7,6 +7,22 @@
     width: 100%;
     height: 100px;
   }
+  .el-table__expanded-cell {
+    z-index: 4;
+    /*background-color: black;*/
+    margin: 0!important;
+    width: 100%;
+    padding: 0!important;
+  }
+  .el-table_1_column_7 {
+    background-color: white;
+  }
+  .el-table {
+    border-right: 1px solid #dfe6ec!important;
+  }
+  td {
+    height: 70px!important;
+  }
   span {
   }
   select {
@@ -31,7 +47,8 @@
     <el-row>
       <el-col :span="24">
         <div class="header">
-          <h1>Using Element.io TODO APP</h1>
+          <h1 align="center">Jackdos</h1>
+          <h2 align="center">Made with Element.io, Vue2.0</h2>
         </div>
       </el-col>
     </el-row>
@@ -39,7 +56,7 @@
 
       <el-col :offset="4" :span="16">
         <el-table style="width: 100%" :data="jackdos">
-          <el-table-column type="expand">
+          <el-table-column fixed="left" type="expand">
             <template scope="scope">
               <div v-html="returnMarked(scope.row)"></div>
               <el-button @click="changeMarkdown(scope.row)" type="text" size="small">
@@ -72,7 +89,7 @@
 
           <el-table-column sortable align="center" :width="120" label="Created" :formatter="dateFormatter" prop="created"></el-table-column>
 
-          <el-table-column sortable prop="due" align="center" :width="250" label="Due">
+          <el-table-column sortable prop="due" align="center" :width="230" label="Due">
             <template scope="scope">
               <div class="block">
                 <span class="demonstration"></span>
@@ -92,7 +109,7 @@
           </template>
         </el-table-column>
 
-          <el-table-column align="center" sortable prop="complete" :width="150" label="Complete">
+          <el-table-column fixed="right" align="center" sortable prop="complete" :width="150" label="Complete">
             <template scope="scope">
               <el-checkbox v-model="scope.row.complete"></el-checkbox>
             </template>
@@ -123,7 +140,7 @@ export default {
     if (!this.$store.get('jackdos')) {
       this.$store.set('jackdos', [{
         'description': 'your description here',
-        'created': new Date(
+        'created': new Date(),
         'category': 'Other',
         'due': '',
         'complete': false,
