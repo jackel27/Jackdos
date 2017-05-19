@@ -120,11 +120,10 @@ export default {
     }
   },
   mounted () {
-    this.jackdos = this.$store.get('jackdos') || []
-    if (this.jackdos.length < 1) {
+    if (!this.$store.get('jackdos')) {
       this.$store.set('jackdos', [{
         'description': 'your description here',
-        'created': new Date(),
+        'created': new Date(
         'category': 'Other',
         'due': '',
         'complete': false,
@@ -132,7 +131,7 @@ export default {
       }])
       this.jackdos = this.$store.get('jackdos')
     } else {
-      console.log(this.jackdos)
+      this.jackdos = this.$store.get('jackdos')
     }
   },
   data: () => ({
