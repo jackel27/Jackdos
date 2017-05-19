@@ -12,7 +12,7 @@
     /*background-color: black;*/
     margin: 0!important;
     width: 100%;
-    padding: 0!important;
+    padding: 20px!important;
   }
   .el-table_1_column_7 {
     background-color: white;
@@ -199,7 +199,7 @@ export default {
       this.jackdos.push({
         'description': 'your description here',
         'created': new Date(),
-        'category': 0,
+        'category': 'Other',
         'due': '',
         'complete': false,
         'markdown': '# insert markdown here'
