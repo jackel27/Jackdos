@@ -120,7 +120,7 @@ export default {
     }
   },
   mounted () {
-    this.jackdos = this.$store.get('jackdos')
+    this.jackdos = this.$store.get('jackdos') || []
     if (this.jackdos.length < 1) {
       this.$store.set('jackdos', [{
         'description': 'your description here',

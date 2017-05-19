@@ -19,7 +19,7 @@ Vue.use(ElementUI, { locale })
 // Vue.use(VueMarkdown)
 
 const router = new Router({
-  mode: 'history',
+  mode: 'hash',
   scrollBehavior: () => ({ y: 0 }),
   routes
 })
