@@ -12,7 +12,10 @@
     /*background-color: black;*/
     margin: 0!important;
     width: 100%;
-    padding: 20px!important;
+    padding-top: 10px!important;
+    padding-left: 60px!important;
+    padding-right: 60px!important;
+    padding-bottom: 10px!important;
   }
   .el-table_1_column_7 {
     background-color: white;
