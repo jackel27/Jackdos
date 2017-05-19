@@ -1,4 +1,7 @@
 <style>
+html {
+  background-color: lightgrey;
+}
 body {
 }
 </style>
