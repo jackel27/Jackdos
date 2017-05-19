@@ -1,6 +1,6 @@
-# weatherpack
+# Jackdos
 
-> My Weather
+> Todo app made with element.io / vue2.0 ....
 
 ## Build Setup
 
